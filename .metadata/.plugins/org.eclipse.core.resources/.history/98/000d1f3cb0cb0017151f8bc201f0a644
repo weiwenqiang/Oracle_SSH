@@ -1,0 +1,45 @@
+package com.wwq.action;
+
+import java.io.File;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UploadAction extends ActionSupport {
+	private File file;
+	private String fileContentType;
+	private String fileFileName;
+	private String msg;
+	public File getFile() {
+		return file;
+	}
+	public void setFile(File file) {
+		this.file = file;
+	}
+	public String getFileContentType() {
+		return fileContentType;
+	}
+	public void setFileContentType(String fileContentType) {
+		this.fileContentType = fileContentType;
+	}
+	public String getFileFileName() {
+		return fileFileName;
+	}
+	public void setFileFileName(String fileFileName) {
+		this.fileFileName = fileFileName;
+	}
+	public String getMsg() {
+		return msg;
+	}
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	@Override
+	public String execute() throws Exception {
+		
+		
+		
+		return super.execute();
+	}
+	
+	
+}

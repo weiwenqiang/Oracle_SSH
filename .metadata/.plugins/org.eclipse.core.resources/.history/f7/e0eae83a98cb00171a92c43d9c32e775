@@ -1,0 +1,14 @@
+package com.wwq.inter;
+
+import com.opensymphony.xwork2.ActionInvocation;
+import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
+
+public class LoginInterceptor extends AbstractInterceptor {
+
+	@Override
+	public String intercept(ActionInvocation ai) throws Exception {
+		
+		return null;
+	}
+
+}

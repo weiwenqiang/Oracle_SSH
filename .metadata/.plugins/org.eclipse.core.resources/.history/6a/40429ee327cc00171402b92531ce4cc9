@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wwq.hibernate">
+	<class name="Person1" table="Person">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<component name="address" class="Address">
+		<property name="street"></property>
+			<property name="address"></property>
+			<property name="city"></property>
+			<property name="code"></property>
+		</component>
+		<property name="name"></property>
+	</class>
+</hibernate-mapping>

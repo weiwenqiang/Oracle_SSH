@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.struts.action.ActionForm"/>
+<fullyQualifiedTypeName name="org.apache.struts2.util.StrutsTypeConverter"/>
+<fullyQualifiedTypeName name="com.wwq.vo.Rectangle"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.interceptor.AbstractInterceptor"/>
+<fullyQualifiedTypeName name="com.wwq.action.LoginAction"/>
+<fullyQualifiedTypeName name="com.wwq.bean.User"/>
+<fullyQualifiedTypeName name="com.wwq.hibernate.Stu"/>
+<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+<fullyQualifiedTypeName name="org.hibernate.classic.Session"/>
+<fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+<fullyQualifiedTypeName name="com.wwq.hibernate.Image"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="javax.imageio.stream.FileImageInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="org.hibernate.Hibernate"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.wwq.hibernate.two.PersonTwo"/>
+<fullyQualifiedTypeName name="com.wwq.hibernate.two.Card"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="com.wwq.hibernate.Normal"/>
+<fullyQualifiedTypeName name="com.wwq.hibernate.util.HibernateSessionFactory"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="org.hibernate.SQLQuery"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Restrictions"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Order"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Example"/>
+<fullyQualifiedTypeName name="com.wwq.cinema.util.HibernateUtil"/>
+<fullyQualifiedTypeName name="com.wwq.cinema.dao.FilmDAO"/>
+<fullyQualifiedTypeName name="com.wwq.cinema.dao.TypeDAO"/>
+<fullyQualifiedTypeName name="com.wwq.cinema.entity.FilmType"/>
+<fullyQualifiedTypeName name="com.wwq.cinema.entity.FilmInfo"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="com.wwq.cinema.biz.FilmBiz"/>
+<fullyQualifiedTypeName name="com.wwq.cinema.util.SearchProperties"/>
+</qualifiedTypeNameHistroy>

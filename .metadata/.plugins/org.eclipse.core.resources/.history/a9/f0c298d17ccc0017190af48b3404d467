@@ -1,0 +1,51 @@
+package com.wwq.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.wwq.hibernate.util.HibernateSessionFactory;
+
+public class HQLTestOne {
+	public static void main(String[] args) {
+		Session session = HibernateSessionFactory.getSession();
+		//---------------- 查询 ----------------
+		// 占位符可以取别名
+		 String hqlSelectId="select a from com.wwq.hibernate.Person as a where id =:id";
+		 Query querySelectId = session.createQuery(hqlSelectId);
+		 querySelectId.setInteger("id", 1);
+		 Person o=(Person)querySelectId.uniqueResult();
+		 System.out.println("查询ID"+o.getName()+"\t"+o.getRole()+"\t"+o.getSex());
+		//---------------- 查询 ----------------
+		String hql = "from Person";
+//		String hql="select a from Person as a where name =:name";
+//		String hql="select a from Person as a where name=:name or sex=:sex";
+		Query querySelectAll = session.createQuery(hql);
+//		querySelectAll.setString("name", "a");
+//		querySelectAll.setString("sex", "unknow");
+		List list = querySelectAll.list();
+		for (int i = 0; i < list.size(); i++) {
+			Person p = (Person) list.get(i);
+			System.out.print(p.getId()+p.getSex() +p.getRole()+ "\r");
+		}
+//		Transaction tx = null;
+//		tx = session .beginTransaction();
+		
+		/*try {
+//			String hql="update Person as a set a.name=:name where a.id =:id";
+			String hql="delete from Person where id=:id";
+			Query query = session.createQuery(hql);
+//			query.setString("name","def");
+			query.setInteger("id", 12);
+			int a = query.executeUpdate();
+			System.out.print(a);//1
+			tx.commit();
+		} catch (Exception e) {
+			tx.rollback();
+			e.printStackTrace();
+		}*/
+
+	}
+}

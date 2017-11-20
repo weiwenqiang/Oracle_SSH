@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hibernate.demo">
+	<class name="com.wwq.hibernate.two.Person" table="person">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="name" type="java.lang.String"></property>
+		<one-to-one name="card" class="com.hibernate.demo.Card" cascade="save-update"></one-to-one>
+	</class>
+</hibernate-mapping>

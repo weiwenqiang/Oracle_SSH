@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.wwq.hibernate.Classroom" table="classroom">
+		<id name="id" column="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="class_name" column="class_name" type="string"></property>
+		<!-- inverse 尽可能减少向数据库发送的sql语句的条数 -->
+		<set name="stuSet" table="student" inverse="true" cascade="save-update">
+		<!--外键的列名称 -->
+			<key column="class_id"></key>
+			<one-to-many class="com.wwq.hibernate.Student" />
+		</set>
+	</class>
+</hibernate-mapping>

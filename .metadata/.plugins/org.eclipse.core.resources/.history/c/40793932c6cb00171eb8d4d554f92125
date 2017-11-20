@@ -1,0 +1,5 @@
+package com.wwq.hibernate;
+
+public class Stu {
+	
+}

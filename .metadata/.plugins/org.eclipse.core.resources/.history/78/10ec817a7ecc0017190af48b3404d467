@@ -1,0 +1,40 @@
+package com.wwq.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.wwq.hibernate.util.HibernateSessionFactory;
+
+public class HQLTestTwo {
+	public static void main(String[] args) {
+		Session session = HibernateSessionFactory.getSession();
+		// 函数的处理
+		String hql = "select avg(a.id) from Person as a";
+		//todo
+//		String hql ="select min(a.id),max(a.id) from Person as a";
+		Query query = session.createQuery(hql);
+		List list=query.list();
+		for (int i = 0; i < list.size(); i++) {
+			Integer j = (Integer)list.get(i);
+			System.out.print(j);
+		}
+//		String hql =" from Person as a order by a.id desc";
+//		Query query = session.createQuery(hql);
+//		List list=query.list();
+//		for (int i = 0; i < list.size(); i++) {
+//			Person j = (Person)list.get(i);
+//			System.out.print(j.getId());
+//		}
+		/*//子查询
+		String hql ="from Person as a where a.id<(select max(b.id) from Person as b )";
+		Query query = session.createQuery(hql);
+		List list=query.list();
+		for (int i = 0; i < list.size(); i++) {
+			Person j = (Person)list.get(i);
+			System.out.print(j.getId());
+		}*/
+	}
+}

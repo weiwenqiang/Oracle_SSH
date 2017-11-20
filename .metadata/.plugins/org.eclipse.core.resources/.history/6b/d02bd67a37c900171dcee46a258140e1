@@ -1,0 +1,58 @@
+package com.demo.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.actions.DispatchAction;
+
+import com.struts.bean.LoginForm;
+
+public class LoginAction extends Action {
+//	侵入式设计-非常不好-一堆废品,方法签名
+	public ActionForward execute(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+//		String username = request.getParameter("username");
+//		String pw = request.getParameter("pw");
+		LoginForm loginform = (LoginForm)form;
+		String username = loginform.getUsername();
+		String pw = loginform.getPw();
+		System.out.print(username+pw);
+//		if (username!=null && username.startsWith("62")) {
+//			return mapping.findForward("success");
+//		}else{
+//			return mapping.findForward("fail");
+//		}
+		
+		return null;
+		
+	}
+	public ActionForward add(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		System.out.print("add");
+		return null;
+	}
+	public ActionForward del(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+	throws Exception {
+		System.out.print("del");
+		return null;
+	}
+	public ActionForward update(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+	throws Exception {
+		System.out.print("update");
+		return null;
+	}
+	public ActionForward select(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+	throws Exception {
+		System.out.print("select");
+		return null;
+	}
+}

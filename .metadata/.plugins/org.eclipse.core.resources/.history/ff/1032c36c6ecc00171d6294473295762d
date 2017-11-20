@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wwq.hibernate">
+	<class name="Person" table="person">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<discriminator column="role"></discriminator>
+		<property name="name"></property>
+		<property name="sex"></property>
+		<subclass name="Manager" discriminator-value="0">
+			<property name="manager_has"></property>
+		</subclass>
+		<subclass name="Normal" discriminator-value="111">
+			<property name="normal_has"></property>
+		</subclass>
+	</class>
+</hibernate-mapping>

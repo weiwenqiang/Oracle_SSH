@@ -1,0 +1,23 @@
+package com.hibernate.demo;
+
+import java.io.File;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.hibernate.ObjectNotFoundException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class CopyOfTest {
+	public static void main(String[] args) throws Exception{
+		File file = new File("src/com/hibernate/demo/hibernate.cfg.xml");
+		Configuration cfg = new Configuration().configure(file);
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session session = sf.openSession();
+		Normal n =(Normal)session.get(Manager.class, 14);
+		System.out.print(n.getId());
+		}
+	}

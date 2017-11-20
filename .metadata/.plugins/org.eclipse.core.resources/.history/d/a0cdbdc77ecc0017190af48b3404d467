@@ -1,0 +1,88 @@
+package com.wwq.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.wwq.hibernate.util.HibernateSessionFactory;
+
+public class HQLTestThree {
+	public static void main(String[] args) {
+		Session session = HibernateSessionFactory.getSession();
+		// ？
+		// String
+		// hql="select a from com.hibernate.entity.Person as a where id =?????????";
+		// 占位符可以取别名
+		// String
+		// hql="select a from com.hibernate.entity.Person as a where id =:id";
+		// Query query = session.createQuery(hql);
+		// query.setInteger("id", 16);
+		// Person o=(Person)query.uniqueResult();
+		// System.out.print(o.getName()+"\t"+o.getRole()+"\t"+o.getSex());
+//		String hql = "from Person";
+//		String hql="select a from Person as a where name =:name";
+//		String hql="select a from Person as a where name=:name or sex=:sex";
+//		Query query = session.createQuery(hql);
+//		query.setString("name", "a");
+//		query.setString("sex", "unknow");
+//		List list = query.list();
+//		for (int i = 0; i < list.size(); i++) {
+//			Person p = (Person) list.get(i);
+//			System.out.print(p.getId()+p.getSex() +p.getRole()+ "\r");
+//		}
+		//不建议使用原生sql
+//		List list =sq.list();
+//		for (int i = 0; i < list.size(); i++) {
+//			System.out.print(list.get(i).toString());
+//		}
+//		完全面向对象
+		Criteria crt = session.createCriteria(Person.class);
+		//比较Restrictions
+//		crt.add(Restrictions.eq("name","a"));
+//		crt.add(Restrictions.lt("id", new Integer(20)));
+//		crt.add(Restrictions.between("id", new Integer(18), new Integer(20)));
+		//排序Order
+//		crt.add(Restrictions.like("name", "%bc%"));
+//		crt.addOrder(Order.desc("id"));
+//		example 完全面向对象的查询，可以传入所需的任何条件
+//		Person per = new Person();
+//		per.setName("abc");
+//		per.setSex("b");
+//		crt.add(Example.create(per));
+		
+		crt.setFirstResult(2);
+		crt.setMaxResults(2);
+		
+		List list = crt.list();
+		for (int i = 0; i < list.size(); i++) {
+			Person p = (Person) list.get(i);
+			System.out.print(p.getId()+"\t"+p.getSex() +"\t"+p.getRole()+"\r");
+		}
+		Transaction tx = null;
+		tx = session .beginTransaction();
+		
+		try {
+			String sql ="select name  from person where id=16";
+//			String s="delete from person where id =16";
+//			SQLQuery sq = session.createSQLQuery(s);
+//			sq.executeUpdate();
+//			String hql="update Person as a set a.name=:name where a.id =:id";
+//			String hql="delete from Person where id=:id";
+//			Query query = session.createQuery(hql);
+////			query.setString("name","def");
+//			query.setInteger("id", 12);
+//			int a = query.executeUpdate();
+//			System.out.print(a);//1
+			tx.commit();
+		} catch (Exception e) {
+			tx.rollback();
+			e.printStackTrace();
+		}finally{
+			session.close();
+			HibernateSessionFactory.getSessionFactory().close();
+		}
+	}
+}

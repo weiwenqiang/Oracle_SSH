@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;WebRoot&apos;&#x0D;&#x0A;- Original project: &apos;47Struts2&apos;&#x0D;&#x0A;- Destination element: &apos;WebRoot&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     success.jsp&#x0D;&#x0A;     fail.jsp&#x0D;&#x0A;     login.jsp" description="Copy files" element1="WebRoot/success.jsp" element2="WebRoot/fail.jsp" element3="WebRoot/login.jsp" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1510760871486" target="/48Struts2/WebRoot" units="0" version="1.0"/>
+</session>

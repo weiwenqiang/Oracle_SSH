@@ -1,0 +1,8 @@
+package com.wwq.action;
+
+public class Snippet {
+	public static void main(String[] args) {
+		DownLoadAction1
+	}
+}
+

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wwq.hibernate">
+
+	<class name="com.wwq.hibernate.Stu" table="stu">
+		<id name="id" >
+			<generator class="native" />
+		</id>
+		<property name="id" column="id"></property>
+		<property name="name" column="name"></property>
+		<property name="email" column="email"></property>
+	</class>
+
+</hibernate-mapping>

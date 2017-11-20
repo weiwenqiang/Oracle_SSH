@@ -1,0 +1,43 @@
+package com.wwq.hibernate;
+
+import java.io.File;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Test {
+	public static void main(String[] args) throws Exception {
+		Stu s1 = new Stu();
+		s1.setName("kjg");
+		s1.setEmail("s1@qq.com");
+
+		Configuration cfg = new Configuration().configure();
+		SessionFactory sf = cfg.buildSessionFactory();
+
+		Session sess = sf.openSession();
+		Transaction tx = null;
+		try {
+			tx = sess.beginTransaction();
+
+			// 插入
+			sess.save(s1);
+			// 查询
+			Stu s2 = (Stu) sess.get(Stu.class, 1);
+			System.out.println(s2.toString());
+			// 修改
+			s2.setName("中文");
+			// 删除
+			sess.delete(s2);
+
+			tx.commit();
+		} catch (Exception e) {
+			if (tx != null)
+				tx.rollback();
+			throw e;
+		} finally {
+			sess.close();
+		}
+	}
+}

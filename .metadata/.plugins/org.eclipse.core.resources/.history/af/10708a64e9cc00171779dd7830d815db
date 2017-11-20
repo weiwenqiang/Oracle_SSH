@@ -1,0 +1,19 @@
+package com.wwq.cinema.dao;
+
+import org.hibernate.Session;
+
+import com.wwq.cinema.util.HibernateUtil;
+
+/**
+ * Data access object (DAO) for domain model
+ * @author MyEclipse Persistence Tools
+ */
+public class BaseHibernateDAO {
+	
+	public Session getSession() {
+		return HibernateUtil.getSession();
+	}	
+	public void closeSession(){
+		HibernateUtil.closeSession();
+	}	
+}

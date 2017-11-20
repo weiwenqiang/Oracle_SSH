@@ -1,0 +1,5 @@
+package com.wwq.vo;
+
+public class Rectangle {
+
+}

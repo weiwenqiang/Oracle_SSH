@@ -1,0 +1,13 @@
+package cn.jbit.cinema.util;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TypeUtil1 {
+	
+	public static final Map FILM_TYPE = new HashMap();
+	public static String typeIdToTypeName(){
+		
+		return null;
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wwq.hibernate2">
+	<class name="Sports" table="SPORTS">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="sports_name"></property>
+		<set name="playerSet" table="sports_player" cascade="all" inverse="true">
+		<key column="sports_id"></key>
+		<many-to-many column="player_id" class="Player">
+		</many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>
