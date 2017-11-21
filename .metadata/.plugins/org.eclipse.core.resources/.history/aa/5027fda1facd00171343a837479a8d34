@@ -1,3 +1,7 @@
 index.username.required=\u7528\u6237\u540D\u5FC5\u586B\u9879
 index.password.required=password is required
 emailerror=\u4E0D\u662F\u4E00\u4E2A\u90AE\u7BB1\u683C\u5F0F
+login.username=\u7528\u6237\u540D
+login.password=\u5BC6\u7801
+login.title=\u6807\u9898
+login.submit=\u63D0\u4EA4

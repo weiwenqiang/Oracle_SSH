@@ -1,0 +1,9 @@
+<project>
+	<target name="i18n">
+		<native2ascii dest=""
+			src="com\\wwq\\tmp"
+			includes="*.properties"
+			encoding="utf-8"
+			></native2ascii>
+	</target>
+</project>

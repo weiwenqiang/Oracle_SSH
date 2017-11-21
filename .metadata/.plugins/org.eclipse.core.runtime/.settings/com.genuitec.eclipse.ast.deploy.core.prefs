@@ -1,4 +1,16 @@
 eclipse.preferences.version=1
+myeclipseTomcatServer.49Struts2.IEARProjectName=
+myeclipseTomcatServer.49Struts2.altContextRoot=
+myeclipseTomcatServer.49Struts2.contextRoot=/49Struts2
+myeclipseTomcatServer.49Struts2.deployIsOverProject=false
+myeclipseTomcatServer.49Struts2.deploymentPath=L\:\\zp\\MyEclipse\\SSH\\.metadata\\.me_tcat\\webapps\\49Struts2
+myeclipseTomcatServer.49Struts2.isDeployed=true
+myeclipseTomcatServer.49Struts2.isExploded=true
+myeclipseTomcatServer.49Struts2.isUptoDate=true
+myeclipseTomcatServer.49Struts2.noFileCopy=false
+myeclipseTomcatServer.49Struts2.shouldBackup=false
+myeclipseTomcatServer.49Struts2.shouldOverwrite=false
+myeclipseTomcatServer.49Struts2.type=WebDeployment
 myeclipseTomcatServer.59Hibernate.IEARProjectName=
 myeclipseTomcatServer.59Hibernate.altContextRoot=
 myeclipseTomcatServer.59Hibernate.contextRoot=/59Hibernate

@@ -4,6 +4,7 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+	<constant name="struts.custom.i18n.resource" value="MessageResource"/>
 	<package name="example" extends="struts-default">
 		<action name="login" class="com.wwq.action.LoginAction">
 			<result>/success.jsp</result>

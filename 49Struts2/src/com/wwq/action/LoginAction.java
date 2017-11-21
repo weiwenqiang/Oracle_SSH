@@ -1,5 +1,12 @@
 package com.wwq.action;
 
+import java.util.Locale;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport {
@@ -15,6 +22,15 @@ public class LoginAction extends ActionSupport {
 			String msg = "用户名称为必填项";
 			this.addFieldError("username", msg);
 		}
+	}
+	
+	public String i18n(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String language = request.getParameter("l");
+		String country = request.getParameter("c");
+		Locale locale = new Locale(language, country);
+		ActionContext.getContext().setLocale(locale);
+		return INPUT;
 	}
 
 	private String username;

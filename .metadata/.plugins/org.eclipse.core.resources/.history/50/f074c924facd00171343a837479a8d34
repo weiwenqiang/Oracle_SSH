@@ -1,0 +1,5 @@
+<project>
+	<target name="i18n">
+		<native2ascii dest=""></native2ascii>
+	</target>
+</project>
