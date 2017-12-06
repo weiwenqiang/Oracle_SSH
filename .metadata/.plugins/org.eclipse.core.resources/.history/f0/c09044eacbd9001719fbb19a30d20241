@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis">
+	<!-- 手动书写sql语句 -->
+	<!-- 如果是查询语句，就应该写在select节点中 -->
+	<insert id="addperson" parameterType="com.wwq.mybatis.vo.Person">
+		insert into person(name) values(#{name})
+	</insert>
+	<select id="selectPerson" resultType="com.wwq.mybatis.vo.Person" >
+		select * from person
+	</select>
+	<update id="updateperson" parameterType="com.wwq.mybatis.vo.Person">
+	update person set name=#{name} where id=#{id}
+	</update>
+	<delete id="deleteperson" parameterType="com.wwq.mybatis.vo.Person">
+	delete from person where id=#{id}
+	</delete>
+</mapper>

@@ -1,0 +1,30 @@
+package com.wwq.ibatis.dao;
+
+import com.wwq.ibatis.vo.Person;
+
+public class PersonDaoImplHibernate implements IPersonDao {
+
+	@Override
+	public void query() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addPerson(Person p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updatePerson(Person p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deletePerson(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+}

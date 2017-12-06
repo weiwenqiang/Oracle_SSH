@@ -24,11 +24,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  		<a href="login/i18n.action?l=en&c=US">yingwen</a><br>
-  		<a href="login/i18n.action?l=zn&c=CN">zhongwen</a><br>
         <s:form action="login.action">
-        <s:textfield name="username" key="login.username"></s:textfield>
-        <s:password name="password" key="login.password"></s:password>
+        <s:textfield name="username" value="username" key="login.username"></s:textfield>
+        <s:password name="password" value="password" key="login.password"></s:password>
         <s:textfield name="age" label="AGE"></s:textfield>
         <s:submit value="submit" key="login.submit"></s:submit>
         </s:form>

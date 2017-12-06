@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="67SpringAOP"
+  id="myeclipse.1511967833246"
+  context-root="/67SpringAOP"
+  j2ee-spec="6.0"
+  archive="67SpringAOP.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

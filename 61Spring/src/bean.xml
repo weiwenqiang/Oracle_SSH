@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" >
+<beans>
+
+	<bean id="user" name="user" class="com.wwq.spring.one.User">
+		<property name="name" value="abc"></property>
+	</bean>
+	<!-- <alias name="user" alias="user1"/> -->
+	<bean id="hibernatedao" class="com.wwq.spring.one.HibernateDao">
+	</bean>
+	<bean id="jdbcdao" class="com.wwq.spring.one.JDBCDao">
+		<property name="cu" ref="conn"></property>
+	</bean>
+
+	<bean id="crud" class="com.wwq.spring.one.CRUD">
+		<property name="dao" ref="jdbcdao"></property>
+	</bean>
+
+
+	<bean id="conn" class="com.wwq.spring.one.ConnectionUtil">
+		<property name="driver" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/zl_day55"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="wwq1993`"></property>
+	</bean>
+
+
+
+
+	<bean id="ud" class="com.wwq.spring.two.UDisk">
+	</bean>
+	<bean id="d" class="com.wwq.spring.two.Disk">
+	</bean>
+	<bean id="com" class="com.wwq.spring.two.Computer">
+		<property name="usb" ref="ud"></property>
+	</bean>
+</beans>

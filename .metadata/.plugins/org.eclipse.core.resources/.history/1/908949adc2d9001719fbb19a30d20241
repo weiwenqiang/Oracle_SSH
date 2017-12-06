@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/zl_day65"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="wwq1993`"></property>
+	</bean>
+	
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation">
+			<value>SqlMapConfig.xml</value>
+		</property>
+	</bean>
+	
+	<bean id="persondao" class="com.wwq.ibatis.dao.PersonDaoImplHibernate">
+		<property name="template" ref="jdbctemplate"></property>
+	</bean>
+	<bean id="datasourcetransactionmanager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="jdbctemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="dataSource" />
+	</bean>
+	<!-- 数据源事物管理器的配置 -->
+	<bean id="transactionProxyFactoryBean"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<!-- 配置代理接口 -->
+		<property name="proxyInterfaces">
+			<list>
+				<value>com.wwq.ibatis.dao.IPersonDao</value>
+			</list>
+		</property>
+		<!-- 配置代理目标 -->
+		<property name="target" ref="userdao"></property>
+		<property name="transactionManager" ref="datasourcetransactionmanager"></property>
+		<property name="transactionAttributes">
+			<props>
+				<!-- 给那些方法做事物处理 -->
+				<prop key="tran*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

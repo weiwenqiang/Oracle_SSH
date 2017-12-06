@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_6_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="src/aopalliance.jar"/>
+	<classpathentry kind="lib" path="src/asm-2.2.2.jar"/>
+	<classpathentry kind="lib" path="src/asm-commons-2.2.2.jar"/>
+	<classpathentry kind="lib" path="src/asm-util-2.2.2.jar"/>
+	<classpathentry kind="lib" path="src/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="src/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="src/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="src/commons-collections.jar"/>
+	<classpathentry kind="lib" path="src/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="src/commons-logging.jar"/>
+	<classpathentry kind="lib" path="src/commons-pool.jar"/>
+	<classpathentry kind="lib" path="src/spring-aspects.jar"/>
+	<classpathentry kind="lib" path="src/spring.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

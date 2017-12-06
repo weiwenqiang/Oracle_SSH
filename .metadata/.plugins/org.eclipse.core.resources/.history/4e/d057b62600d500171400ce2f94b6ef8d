@@ -1,0 +1,31 @@
+package com.wwq.spring;
+
+import java.util.List;
+
+public class UserDaoimpl implements UserDao {
+	private JdbcTemplate template;
+	@Override
+	public int delete(Person p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void add(Person p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List listPerson() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Person p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

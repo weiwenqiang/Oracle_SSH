@@ -1,0 +1,33 @@
+package com.wwq.spring;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+	public static void main(String[] args) {
+		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
+		UserDao dao = (UserDao)ac.getBean("userdao");
+		Person p = new Person();
+		p.setId(23);
+		p.setName("уенч╪и");
+		
+		dao.add(p);
+		
+		dao.delete(p);
+		
+		dao.update(p);
+		
+		List<Person> list = new ArrayList<Person>();
+		for (int i = 0; i < list.size(); i++) {
+			Map map = (Map)list.get(i);
+			System.out.println(map.get("name").toString());
+			
+			Person p1 = (Person)list.get(i);
+			System.out.print(p.getName());
+		}
+	}
+}

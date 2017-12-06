@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<bean id="beforeadvice" class="com.wwq.spring.LogBeforeAdvice"></bean>
+	<bean id="afteradvice" class="com.wwq.spring.LogAfterAdvice"></bean>
+	<bean id="userdao" class="com.wwq.spring.UserDaoimpl"></bean>
+	
+	<bean id="proxybean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<!-- 配置代理接口 -->
+			<value>com.wwq.spring.UserDao</value>
+		</property>
+		<!-- 配置代理目标 -->
+		<property name="target" ref="userdao"></property>
+		<!-- 配置执行时机 -->
+		<property name="interceptorNames">
+		<!-- 配置代理功能 -->
+			<list>
+				<value>beforeadvice</value>
+				<value>afteradvice</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

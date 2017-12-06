@@ -1,0 +1,18 @@
+package com.wwq.ibatis.test;
+
+import com.wwq.ibatis.dao.PersonDaoIMPL;
+import com.wwq.ibatis.vo.Person;
+
+public class Test {
+	public static void main(String[] args) {
+		PersonDaoIMPL p1 = new PersonDaoIMPL();
+		Person p = new Person();
+		p.setId(21);
+		p.setName("张无忌");
+		p.setSalary(7000);
+		//添加
+		p1.addPerson(p);
+		//查询
+		p1.query();
+	}
+}

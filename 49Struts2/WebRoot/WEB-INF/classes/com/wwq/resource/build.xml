@@ -1,7 +1,7 @@
 <project>
 	<target name="i18n">
 		<native2ascii dest=""
-			src="com\\wwq\\tmp"
+			src="com\\wwq\\mr"
 			includes="*.properties"
 			encoding="utf-8"
 			></native2ascii>

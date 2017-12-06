@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap>
+	<!-- 手动书写sql语句 -->
+	<!-- 如果是查询语句，就应该写在select节点中 -->
+	<select id="selectfromperson" resultClass="com.wwq.ibatis.vo.Person">
+		select * from person
+	</select>
+	<insert id="addperson" parameterClass="com.wwq.ibatis.vo.Person">
+		insert into person(name,salary) values(#name#,#salary#)
+	</insert>
+</sqlMap>

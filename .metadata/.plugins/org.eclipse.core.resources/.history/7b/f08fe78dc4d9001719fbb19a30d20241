@@ -1,0 +1,44 @@
+package com.wwq.ibatis.dao;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.springframework.orm.ibatis.SqlMapClientTemplate;
+
+import com.wwq.ibatis.vo.Person;
+
+public class PersonDaoImplHibernate implements IPersonDao {
+	private SqlMapClientTemplate clientTemplate;
+	
+	public SqlMapClientTemplate getClientTemplate() {
+		return clientTemplate;
+	}
+
+	public void setClientTemplate(SqlMapClientTemplate clientTemplate) {
+		this.clientTemplate = clientTemplate;
+	}
+
+	@Override
+	public void addPerson(Person p) {
+	}
+
+	@Override
+	public List query() {
+		Session s = factory.getSession();
+		String sql ="from Person";
+		Query q = s.createQuery(sql);
+		List<Person> list = q.list();
+		return list;
+	}
+
+	@Override
+	public void updatePerson(Person p) {
+	}
+
+	@Override
+	public void deletePerson(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+}

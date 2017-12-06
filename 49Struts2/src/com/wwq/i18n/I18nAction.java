@@ -14,7 +14,8 @@ public class I18nAction extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
-		return SUCCESS;
+//		i18n();
+		return INPUT;
 	}
 	
 	public String i18n(){

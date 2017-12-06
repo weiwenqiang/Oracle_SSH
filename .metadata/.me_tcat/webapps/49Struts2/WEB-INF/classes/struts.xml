@@ -4,11 +4,15 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+<constant name="struts.action.extension" value="action"></constant>
 	<constant name="struts.custom.i18n.resource" value="MessageResource"/>
 	<package name="example" extends="struts-default">
 		<action name="login" class="com.wwq.action.LoginAction">
 			<result>/success.jsp</result>
 			<result name="input">/login.jsp</result>
+		</action>
+		<action name="i18n" class="com.wwq.i18n.I18nAction">
+			<result name="input">/i18n.jsp</result>
 		</action>
 			<action name="validate" class="com.wwq.action.ValidateActionAuto">
 			<result>/success.jsp</result>

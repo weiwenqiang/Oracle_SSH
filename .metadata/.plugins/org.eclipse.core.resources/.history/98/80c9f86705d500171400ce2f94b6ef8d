@@ -1,0 +1,5 @@
+package com.wwq.spring.hibernate;
+
+public class UserDaoIMPL {
+
+}

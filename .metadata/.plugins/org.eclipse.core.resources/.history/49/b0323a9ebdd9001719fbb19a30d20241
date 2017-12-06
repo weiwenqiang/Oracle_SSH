@@ -1,0 +1,8 @@
+package com.wwq.ibatis.test;
+
+import com.wwq.ibatis.dao.PersonDaoIMPL;
+import com.wwq.ibatis.vo.Person;
+
+public class Test {
+	
+}

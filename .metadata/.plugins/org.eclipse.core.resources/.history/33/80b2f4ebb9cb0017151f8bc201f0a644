@@ -1,7 +1,0 @@
-package com.wwq.action;
-
-import com.opensymphony.xwork2.ActionSupport;
-
-public class DownLoadAction1 extends ActionSupport {
-
-}

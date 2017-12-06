@@ -1,0 +1,5 @@
+package com.wwq.ibatis.utils;
+
+public class GetSqlMapClient {
+
+}

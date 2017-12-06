@@ -1,7 +1,0 @@
-package com.wwq.hibernate;
-
-public class Stu {
-	private int id;
-	private String name;
-	private String email;
-}
